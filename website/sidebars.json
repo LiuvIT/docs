@@ -1,7 +1,9 @@
 {
   "comanda-fisica": {
     "Comanda fisica": [
-      "comanda-fisica/introducao"
+      "comanda-fisica/introducao",
+      "comanda-fisica/sugestao",
+      "comanda-fisica/formas-pagamento"
     ]
   }
 }
