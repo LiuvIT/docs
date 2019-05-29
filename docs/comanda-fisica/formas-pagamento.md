@@ -26,38 +26,39 @@ http://example.com.br/api/formas-pagamento/
 
 status code: 200
 
-
-    [
-        {
-            "id": 1,
-            "title": "Mastercard",
-            "type": "credito"
-        },
-        {
-            "id": 2,
-            "title": "Mastercard",
-            "type": "débito"
-        },
-        {
-            "id": 3,
-            "title": "Visa",
-            "type": "débito"
-        },
-        {
-            "id": 4,
-            "title": "Visa",
-            "type": "débito"
-        }
-        ...
-    ]
+```json
+[
+    {
+        "id": 1,
+        "title": "Mastercard",
+        "type": "credito"
+    },
+    {
+        "id": 2,
+        "title": "Mastercard",
+        "type": "débito"
+    },
+    {
+        "id": 3,
+        "title": "Visa",
+        "type": "débito"
+    },
+    {
+        "id": 4,
+        "title": "Visa",
+        "type": "débito"
+    }
+    ...
+]
+```
 
 ### Resposta de token inválido  
 
 <a class="link-block" href="/comanda-fisica/sugestao#resposta-da-api-de-token-invalido">Veja aqui qual é o padrão de resposta para token inválido</a>
 
-### Código do restaurante inválido
+### Resposta de código do restaurante inválido
 
-<a class="link-block" href="//comanda-fisica/sugestao#resposta-da-api-codigo-do-restaurante-invalido">Veja aqui qual é o padrão de resposta para código do restaurante inválido</a>
+<a class="link-block" href="/comanda-fisica/sugestao#resposta-da-api-codigo-do-restaurante-invalido">Veja aqui qual é o padrão de resposta para código do restaurante inválido</a>
 
 ****
 

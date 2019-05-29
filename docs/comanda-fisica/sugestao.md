@@ -26,10 +26,12 @@ Para autenticação existem várias ferramentas que trabalham com troca de token
 
 ### Resposta da api de token inválido:
 
-    {
-        "erro": true,
-        "message": "Token inválido"
-    }
+```json
+{
+    "erro": true,
+    "message": "Token inválido"
+}
+```
 
 ## Identificação do restaurante
 
@@ -39,10 +41,12 @@ Para sistemas que no mesmo projeto estão conectados a vários restaurantes, sug
 
 ### Resposta da api código do restaurante inválido:
 
-    {
-        "erro": true,
-        "message": "Código de identificação do restaurante inválido ou não encontrado."
-    }
+```json
+{
+    "erro": true,
+    "message": "Código de identificação do restaurante inválido ou não encontrado."
+}
+```
 
 ## Timeout
 

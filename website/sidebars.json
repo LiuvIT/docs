@@ -3,7 +3,9 @@
     "Comanda fisica": [
       "comanda-fisica/introducao",
       "comanda-fisica/sugestao",
-      "comanda-fisica/formas-pagamento"
+      "comanda-fisica/formas-pagamento",
+      "comanda-fisica/consulta-comanda",
+      "comanda-fisica/fechamento-comanda"
     ]
   }
 }
