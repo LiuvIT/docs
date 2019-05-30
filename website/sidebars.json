@@ -5,7 +5,8 @@
       "comanda-fisica/sugestao",
       "comanda-fisica/formas-pagamento",
       "comanda-fisica/consulta-comanda",
-      "comanda-fisica/fechamento-comanda"
+      "comanda-fisica/fechamento-comanda",
+      "comanda-fisica/consulta-cupom-fiscal"
     ]
   }
 }
