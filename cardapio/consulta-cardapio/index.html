@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Consulta de cardápio · Liuv Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Listar"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Consulta de cardápio · Liuv Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://liuv.github.io/"/><meta property="og:description" content="## Listar"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://unpkg.com/feather-icons"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/liuv_degrade.png" alt="Liuv Docs"/><h2 class="headerTitleWithLogo">Liuv Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Buscar" title="Buscar"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Cardápio</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Cardápio</h3><ul class=""><li class="navListItem"><a class="navItem" href="/cardapio/introducao">Introdução</a></li><li class="navListItem"><a class="navItem" href="/cardapio/sugestao">Sugestão</a></li><li class="navListItem"><a class="navItem" href="/cardapio/formas-pagamento">Formas de pagamento</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/cardapio/consulta-cardapio">Consulta de cardápio</a></li><li class="navListItem"><a class="navItem" href="/cardapio/abrir-comanda">Abrir comanda / mesa</a></li><li class="navListItem"><a class="navItem" href="/cardapio/adicionar-itens-comanda">Adicionar itens comanda / mesa</a></li><li class="navListItem"><a class="navItem" href="/cardapio/finalizar-comanda">Finalizar comanda</a></li><li class="navListItem"><a class="navItem" href="/cardapio/consulta-cupom-fiscal">Consulta do cupom fiscal</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Consulta de cardápio</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="listar"></a><a href="#listar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listar</h2>
+<p>É necessário deixarmos sincronizados o cardápio do sistema do restaurante com o cardápio do aplicativo da Liuv, dessa forma conseguimos identificar quais forma os itens vendidos ao cliente e enviar para o sistema de integração. Nesse caso a consulta do cardápio poderá ser feita de dois modelos diferentes, uma delas com categorias e os itens da categoria e o outro modelo com os itens e uma chave com as categorias do item.</p>
+<h3><a class="anchor" aria-hidden="true" id="método-get"></a><a href="#método-get" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Método: GET</h3>
+<p><a href="https://restfulapi.net/http-methods/#get">Leia mais sobre método GET</a></p>
+<h3><a class="anchor" aria-hidden="true" id="endpoint"></a><a href="#endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoint:</h3>
+<p><a href="http://example.com.br/api/cardapio/">http://example.com.br/api/cardapio/</a></p>
+<h3><a class="anchor" aria-hidden="true" id="header"></a><a href="#header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Header:</h3>
+<pre><code class="hljs">Authorization: TOKEN
+MerchantId: CODIGO_BASE_64
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="resposta-de-sucesso---modelo-categoria--items"></a><a href="#resposta-de-sucesso---modelo-categoria--items" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resposta de sucesso - Modelo Categoria &gt; Items</h3>
+<p>status code: 200</p>
+<pre><code class="hljs css language-json">[
+    [{
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Refrigerantes"</span>,
+        <span class="hljs-attr">"items"</span>: [{
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">15</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Coca-Cola"</span>,
+            <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Lata 350ml"</span>,
+            <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">5.5</span>
+        }, {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">16</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Guaraná Antartica"</span>,
+            <span class="hljs-attr">"description"</span>: <span class="hljs-string">"600ml"</span>,
+            <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">7.5</span>
+        }]
+    }, {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Salgados"</span>,
+        <span class="hljs-attr">"items"</span>: [{
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">158</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Pão de queijo"</span>,
+            <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">4.5</span>
+        }, {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">157</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Mini pão de queijo"</span>,
+            <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Balde com 6"</span>,
+            <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">5.5</span>
+        }]
+    }]
+]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="resposta-de-sucesso---modelo-items--categorias"></a><a href="#resposta-de-sucesso---modelo-items--categorias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resposta de sucesso - Modelo Items &gt; Categorias</h3>
+<p>status code: 200</p>
+<pre><code class="hljs css language-json">[{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Coca-Cola"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Lata 350ml"</span>,
+    <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">5.5</span>,
+    <span class="hljs-attr">"categories"</span>: [{
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Refrigerantes"</span>
+    }, {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Bebidas"</span>
+    }]
+}, {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">158</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Pão de queijo"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"unit_price"</span>: <span class="hljs-number">4.5</span>,
+    <span class="hljs-attr">"categories"</span>: [{
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">9</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Salgados"</span>
+    }, {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Café da manhã"</span>
+    }]
+}]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="resposta-de-token-inválido"></a><a href="#resposta-de-token-inválido" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resposta de token inválido</h3>
+<p><a class="link-block" href="/comanda-fisica/sugestao#resposta-da-api-de-token-invalido">Veja aqui qual é o padrão de resposta para token inválido</a></p>
+<h3><a class="anchor" aria-hidden="true" id="resposta-de-código-do-restaurante-inválido"></a><a href="#resposta-de-código-do-restaurante-inválido" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resposta de código do restaurante inválido</h3>
+<p><a class="link-block" href="/comanda-fisica/sugestao#resposta-da-api-codigo-do-restaurante-invalido">Veja aqui qual é o padrão de resposta para código do restaurante inválido</a></p>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/cardapio/formas-pagamento"><span class="arrow-prev">← </span><span>Formas de pagamento</span></a><a class="docs-next button" href="/cardapio/abrir-comanda"><span>Abrir comanda / mesa</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#listar">Listar</a><ul class="toc-headings"><li><a href="#método-get">Método: GET</a></li><li><a href="#endpoint">Endpoint:</a></li><li><a href="#header">Header:</a></li><li><a href="#resposta-de-sucesso---modelo-categoria--items">Resposta de sucesso - Modelo Categoria &gt; Items</a></li><li><a href="#resposta-de-sucesso---modelo-items--categorias">Resposta de sucesso - Modelo Items &gt; Categorias</a></li><li><a href="#resposta-de-token-inválido">Resposta de token inválido</a></li><li><a href="#resposta-de-código-do-restaurante-inválido">Resposta de código do restaurante inválido</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="Liuv Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/en/doc1.html">Getting Started (or other categories)</a><a href="/en/doc2.html">Guides (or other categories)</a><a href="/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Liuv</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5dc671a599b5bd99be02331f2d567b97',
+                indexName: 'liuv',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
