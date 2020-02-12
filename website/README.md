@@ -186,6 +186,13 @@ For more information about the navigation bar, click [here](https://docusaurus.i
 }
 ```
 
+## Deploy
+
+GIT_USER=<GIT_USER> \
+  CURRENT_BRANCH=master \
+  USE_SSH=true \
+  yarn run publish-gh-pages
+
 For more information about custom pages, click [here](https://docusaurus.io/docs/en/custom-pages).
 
 # Full Documentation
