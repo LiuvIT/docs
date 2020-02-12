@@ -8,5 +8,17 @@
       "comanda-fisica/fechamento-comanda",
       "comanda-fisica/consulta-cupom-fiscal"
     ]
+  },
+  "cardapio": {
+    "Cardápio": [
+      "cardapio/introducao",
+      "cardapio/sugestao",
+      "cardapio/formas-pagamento",
+      "cardapio/consulta-cardapio",
+      "cardapio/abrir-comanda",
+      "cardapio/adicionar-itens-comanda",
+      "cardapio/finalizar-comanda",
+      "cardapio/consulta-cupom-fiscal"
+    ]
   }
 }

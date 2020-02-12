@@ -4,7 +4,16 @@ title: Introdução a integração com cardápio
 sidebar_label: Introdução
 ---
 
-## Lorem
+## Fluxo de cardápio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.
+Nesse fluxo cada restaurante disponível tem dentro da página de detalhes do aplicativo uma cópia atualizada diariamente de todo o cardápio e os pedidos feitos pela Liuv irão ser enviados para o sistema após a finalização do mesmo.
 
+## Liuv
+
+A Liuv desenvolveu um sistema de pagamento onde fazemos integração com vários sistemas de frente de caixa permitindo o usuário efetuar o pagamento dessas comandas atráves do aplicativo instalado no smartfone do próprio cliente.
+
+## Sugestão de desenvolvimento
+
+A Liuv tem um modelo de sugestão de fácil implementação necessária para que o aplicativo consiga se comunicar diretamente com o sistema, permitindo ao usuário saber o consumo da comanda, efetuar o pagamento e sair sem pegar fila. 
+
+> Lembrando que todo o material descrito aqui é apenas uma sugestão. Temos uma aplicação dinâmica capaz de integrar com qualquer tipo de sistema com pouco desenvolvimento.

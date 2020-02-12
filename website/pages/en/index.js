@@ -25,7 +25,13 @@ const Docs = [
     title: 'Integração com cardápio',
     icon: 'fas fa-mobile-alt',
     description: 'Sugestão de integração para consulta de cardápio.'
-  }
+  },
+  {
+    path: 'checkout',
+    title: 'Checkout de pagamento',
+    icon: 'fas fa-mobile-alt',
+    description: 'Integração com checkout de pagamento.'
+  },
 ]
 
 class HomeSplash extends React.Component {
